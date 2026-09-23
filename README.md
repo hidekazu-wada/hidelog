@@ -17,15 +17,15 @@ HideLog - Personal blog built with Astro
 
 The blog is organized around the following slugs defined in `src/consts.ts`:
 
-| Slug         | Name          | Notes                                  |
-| ------------ | ------------- | -------------------------------------- |
-| `dive`       | Dive Life     | 安全と恐怖克服、海外ショップ運営       |
-| `strength`   | Strength Lab  | 週6筋トレの分割・栄養ログ              |
-| `code`       | Code & Tech   | Web制作・WordPress復旧・SEO・Astro    |
-| `nature`     | Nature Living | 自然豊かな地域での暮らし方             |
-| `family`     | Family & Home | 夫婦生活、子育て、家づくり             |
-| `books`      | Books & Ideas | 読書ログと実践メモ                     |
-| `playground` | Playground    | 実験メモ・旅・新企画の下書き           |
+| Slug         | Name          | Notes                              |
+| ------------ | ------------- | ---------------------------------- |
+| `dive`       | Dive Life     | 安全と恐怖克服、海外ショップ運営   |
+| `strength`   | Strength Lab  | 週6筋トレの分割・栄養ログ          |
+| `code`       | Code & Tech   | Web制作・WordPress復旧・SEO・Astro |
+| `nature`     | Nature Living | 自然豊かな地域での暮らし方         |
+| `family`     | Family & Home | 夫婦生活、子育て、家づくり         |
+| `books`      | Books & Ideas | 読書ログと実践メモ                 |
+| `playground` | Playground    | 実験メモ・旅・新企画の下書き       |
 
 Each article should declare its category (and optional CTA overrides) in the frontmatter:
 

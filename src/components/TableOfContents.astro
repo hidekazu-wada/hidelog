@@ -27,11 +27,11 @@ for (const heading of headings) {
 
 {
 	toc.length > 0 ? (
-		<nav class={compact ? '' : 'py-12 rounded'} data-toc>
+		<nav class:list={{ 'py-12 rounded': !compact }} data-toc>
 			{!compact && (
 				<h2 class="text-2xl mr-2 pb-1 mb-3 font-bold">On This Page</h2>
 			)}
-			<ul class={compact ? 'space-y-2' : 'space-y-3'}>
+			<ul class:list={{ 'space-y-2': compact, 'space-y-3': !compact }}>
 				{toc.map((h2) => (
 					<li>
 						<a
@@ -88,12 +88,16 @@ for (const heading of headings) {
 		const links = Array.from(
 			document.querySelectorAll<HTMLAnchorElement>('[data-toc-link]')
 		)
-		if (links.length === 0) return
+		if (links.length === 0) {
+			return
+		}
 
 		const targets = links
 			.map((link) => document.getElementById(link.dataset.tocLink || ''))
 			.filter((el): el is HTMLElement => el !== null)
-		if (targets.length === 0) return
+		if (targets.length === 0) {
+			return
+		}
 
 		const visible = new Set<string>()
 
@@ -115,18 +119,18 @@ for (const heading of headings) {
 				}
 			}
 			links.forEach((link) => {
-				link.classList.toggle(
-					'is-active',
-					link.dataset.tocLink === currentId
-				)
+				link.classList.toggle('is-active', link.dataset.tocLink === currentId)
 			})
 		}
 
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
-					if (entry.isIntersecting) visible.add(entry.target.id)
-					else visible.delete(entry.target.id)
+					if (entry.isIntersecting) {
+						visible.add(entry.target.id)
+					} else {
+						visible.delete(entry.target.id)
+					}
 				})
 				highlight()
 			},

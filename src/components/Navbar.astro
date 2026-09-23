@@ -2,8 +2,7 @@
 import NavbarLink from './NavbarLink.astro'
 import { Icon } from 'astro-icon/components'
 import ThemeSelector from './ThemeSelector.astro'
-import { SITE_BASE, Categories } from '../consts'
-import type { CategorySlug } from '../consts'
+import { SITE_BASE, Categories, type CategorySlug } from '../consts'
 import { getCollection } from 'astro:content'
 import LogoSVG from '../assets/logo.svg'
 
@@ -28,12 +27,12 @@ const categoriesWithPosts = new Set<CategorySlug>(
 )
 
 // 記事のあるカテゴリーのみを含むリンクリストを生成
-const categoryLinks = Categories.filter((cat) => categoriesWithPosts.has(cat.slug)).map(
-	(cat) => ({
-		name: cat.name,
-		url: `category/${cat.slug}`,
-	})
-)
+const categoryLinks = Categories.filter((cat) =>
+	categoriesWithPosts.has(cat.slug)
+).map((cat) => ({
+	name: cat.name,
+	url: `category/${cat.slug}`,
+}))
 
 const WebsiteLinks = [
 	{

@@ -38,10 +38,13 @@ export const Categories: CategoryDefinition[] = [
 		description:
 			'Web制作、WordPressのトラブル復旧、SEO、Astro。現場で実際に手を動かした記録を、設計の視点から残します。',
 		summary: 'WordPress復旧、セキュリティ、Astro、SEO設計。',
-		focus: ['WordPress復旧・セキュリティ', 'Astroとパフォーマンス', 'SEOと設計'],
+		focus: [
+			'WordPress復旧・セキュリティ',
+			'Astroとパフォーマンス',
+			'SEOと設計',
+		],
 		ctaLabel: 'Webの相談をする',
-		ctaHref:
-			'mailto:info@wadahide.com?subject=Web制作・トラブル対応のご相談',
+		ctaHref: 'mailto:info@wadahide.com?subject=Web制作・トラブル対応のご相談',
 		ctaDescription:
 			'Web制作、WordPressの復旧・保守、SEO改善のご相談を受け付けています。',
 	},

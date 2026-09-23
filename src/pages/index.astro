@@ -1,13 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import { Categories, SITE_BASE, SITE_TITLE, SITE_DESCRIPTION, SocialLinks } from '../consts'
-import type { CategorySlug } from '../consts'
+import {
+	Categories,
+	SITE_BASE,
+	SITE_TITLE,
+	SITE_DESCRIPTION,
+	SocialLinks,
+	type CategorySlug,
+} from '../consts'
 import { Icon } from 'astro-icon/components'
 import BlogCard from '../components/BlogCard.astro'
 import { getCollection } from 'astro:content'
 
-const allPosts = (await getCollection('blog', ({ data }) => data.draft !== true))
-	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+const allPosts = (
+	await getCollection('blog', ({ data }) => data.draft !== true)
+).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 
 const posts = allPosts.slice(0, 4)
 
@@ -23,8 +30,8 @@ const websiteSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'WebSite',
 	name: 'HideLog',
-		description:
-			'10年以上の経験を持つダイビングインストラクターが、安全に潜るための知識、器材選び、海外ダイビングのリアルな情報を実体験をもとに発信するブログ。',
+	description:
+		'10年以上の経験を持つダイビングインストラクターが、安全に潜るための知識、器材選び、海外ダイビングのリアルな情報を実体験をもとに発信するブログ。',
 	url: Astro.site?.toString() || '',
 	author: {
 		'@type': 'Person',
@@ -60,10 +67,7 @@ const organizationSchema = {
 }
 ---
 
-<BaseLayout
-	title={SITE_TITLE}
-	description={SITE_DESCRIPTION}
->
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
 	<script
 		type="application/ld+json"
@@ -171,7 +175,9 @@ const organizationSchema = {
 		</div>
 		<div class="space-y-6">
 			<h2 class="section-title">Get in touch</h2>
-			<p class="text-lg max-w-xl">ダイビングに関するご相談やお問い合わせはこちらからどうぞ</p>
+			<p class="text-lg max-w-xl">
+				ダイビングに関するご相談やお問い合わせはこちらからどうぞ
+			</p>
 			<div class="flex flex-wrap mt-auto space-x-4">
 				<a
 					class="btn-primary"

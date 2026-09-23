@@ -47,10 +47,7 @@ const lastModified = dayjs(remarkPluginFrontmatter.lastModified)
 
 const articleUrl = new URL(`/blog/${slug}/`, Astro.site)
 const coverImageUrl = blogImages[coverImagePath]
-	? new URL(
-			(await blogImages[coverImagePath]()).default.src,
-			Astro.site
-		)
+	? new URL((await blogImages[coverImagePath]()).default.src, Astro.site)
 	: new URL('/og-default.jpg', Astro.site)
 
 // Article structured data
@@ -111,16 +108,22 @@ const breadcrumbSchema = {
 
 <BaseLayout title={title} description={description}>
 	<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
-	<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	<script
+		type="application/ld+json"
+		set:html={JSON.stringify(breadcrumbSchema)}
+	/>
 	<!-- Article-specific meta tags -->
 	<meta property="og:type" content="article" />
 	<meta property="article:published_time" content={pubDate.toISOString()} />
-	{updatedDate && (
-		<meta property="article:modified_time" content={updatedDate.toISOString()} />
-	)}
-	{category && (
-		<meta property="article:section" content={category} />
-	)}
+	{
+		updatedDate && (
+			<meta
+				property="article:modified_time"
+				content={updatedDate.toISOString()}
+			/>
+		)
+	}
+	{category && <meta property="article:section" content={category} />}
 
 	<div id="reading-progress" aria-hidden="true"></div>
 
@@ -247,7 +250,9 @@ const breadcrumbSchema = {
 	const setupProgress = () => {
 		const bar = document.getElementById('reading-progress')
 		const article = document.querySelector<HTMLElement>('[data-article]')
-		if (!bar || !article) return
+		if (!bar || !article) {
+			return
+		}
 
 		let ticking = false
 		const update = () => {
@@ -274,7 +279,9 @@ const breadcrumbSchema = {
 	const setupCopyButtons = () => {
 		const blocks = document.querySelectorAll<HTMLPreElement>('.prose pre')
 		blocks.forEach((pre) => {
-			if (pre.querySelector('.copy-code-button')) return
+			if (pre.querySelector('.copy-code-button')) {
+				return
+			}
 
 			const button = document.createElement('button')
 			button.type = 'button'
@@ -307,7 +314,9 @@ const breadcrumbSchema = {
 	// --- モバイル目次: リンクを押したら閉じる ---
 	const setupMobileToc = () => {
 		const toc = document.getElementById('mobile-toc')
-		if (!toc) return
+		if (!toc) {
+			return
+		}
 		toc.querySelectorAll('a').forEach((link) => {
 			link.addEventListener('click', () => {
 				toc.removeAttribute('open')
