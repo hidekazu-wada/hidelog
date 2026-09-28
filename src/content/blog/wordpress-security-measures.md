@@ -6,10 +6,10 @@ pubDate: '2026-07-30'
 updatedDate: '2026-09-24'
 coverImageCredit: ''
 category: 'code'
-ctaTitle: 'WordPressのセキュリティ・トラブル対応でお困りですか？'
-ctaDescription: '現役エンジニアが、WordPressの復旧・ハッキング対応と再発防止を承っています。「対策したいが何から手を付ければいいか分からない」というご相談も。状況確認・お見積りは無料です。'
-ctaLabel: 'WordPressの相談をする'
-ctaHref: 'https://coconala.com/services/2970257'
+ctaTitle: 'WordPressの更新、止まっていませんか？'
+ctaDescription: 'WordPress本体・プラグインの更新を、テストサイトで確かめてから本番に反映します。更新で崩れたら直すところまで含めて、1サイト月額11,000円（税込）です。'
+ctaLabel: '保守の内容を見る'
+ctaHref: '/maintenance'
 draft: false
 ---
 
