@@ -35,6 +35,11 @@ import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
 import CategoryCTA from '../components/CategoryCTA.astro'
 
+// 内容キャッシュに古い英語表記（"3 min read"）が残っていても日本語で出すため、数字だけ取り出す
+const readingMinutes = String(remarkPluginFrontmatter.minutesRead ?? '').match(
+	/\d+/
+)?.[0]
+
 const blogImages = import.meta.glob<{ default: ImageMetadata }>(
 	'/src/assets/blogimages/**/*.{jpeg,jpg,png,gif}'
 )
@@ -176,7 +181,7 @@ const breadcrumbSchema = {
 									name="mdi:clock-time-four-outline"
 									class="inline-block text-primary dark:text-primary-dark"
 								/>
-								{remarkPluginFrontmatter.minutesRead}
+								約{readingMinutes ?? 1}分で読めます
 							</span>
 						</div>
 
