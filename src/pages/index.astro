@@ -31,7 +31,7 @@ const websiteSchema = {
 	'@type': 'WebSite',
 	name: 'HideLog',
 	description:
-		'10年以上の経験を持つダイビングインストラクターが、安全に潜るための知識、器材選び、海外ダイビングのリアルな情報を実体験をもとに発信するブログ。',
+		'AIエンジニアとリゾート経営の現場から。WordPressの復旧・保守やWeb制作、AIを使った業務の仕組みづくり、ホテルとキャンプ場の経営で、実際に起きたことと判断の記録を書いています。',
 	url: Astro.site?.toString() || '',
 	author: {
 		'@type': 'Person',
@@ -78,12 +78,12 @@ const organizationSchema = {
 	>
 		<div>
 			<p class="block text-2xl md:text-3xl opacity-70 mt-9 mb-4">
-				10年以上の経験を持つダイビングインストラクターが贈る
+				AIエンジニアとリゾート経営の現場から
 			</p>
 			<h1 class="text-6xl md:text-8xl font-bold leading-none">HideLog</h1>
 		</div>
 		<p class="text-2xl max-w-3xl font-light leading-normal">
-			元ダイビングインストラクターとして、海外でのショップ運営や水族館での作業ダイバーなど、豊富な経験を積んできました。このブログでは、安全に潜るための知識、器材選びのコツ、海外ダイビングのリアルな情報を、実体験をもとに丁寧にお届けします。
+			ホテルとキャンプ場を営む会社の常務として、Webとシステム、AIを使った業務の仕組みづくりを担当しています。フリーランスのエンジニアとしても、WordPressの復旧・保守やWeb制作を手がけています。このブログには、どちらの現場でも実際に起きたことと、そのとき何を見て判断したかを書いています。
 		</p>
 		<div class="flex flex-wrap gap-4">
 			<a class="btn-primary" href="/blog">
@@ -112,10 +112,10 @@ const organizationSchema = {
 
 	<section class="app-container pt-4 pb-8 space-y-10">
 		<div class="space-y-4">
-			<p class="text-sm uppercase tracking-[0.3em] text-primary">Topics</p>
-			<h2 class="section-title">ダイビングに関する情報</h2>
+			<p class="text-sm uppercase tracking-[0.3em] text-primary">テーマ</p>
+			<h2 class="section-title">書いていること</h2>
 			<p class="text-lg max-w-3xl">
-				初心者から上級者まで、ダイビングを安全に楽しむための知識と実体験をまとめています。ライセンス取得、器材選び、海外ダイビング、安全管理など、あなたのダイビングライフをサポートします。
+				Webとシステム、AI、そしてリゾート経営。どちらも、教科書的な手順ではなく「実際に起きたこと」と「そのとき何を見て判断したか」を残しています。
 			</p>
 		</div>
 		<div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -151,22 +151,22 @@ const organizationSchema = {
 
 	<!-- Recent Posts Section -->
 	<section class="app-container">
-		<h2 class="section-title">Recent Posts</h2>
+		<h2 class="section-title">最新の記事</h2>
 		<div class="posts-grid-container">
 			{posts.map((post) => <BlogCard post={post} />)}
 		</div>
 		<a class="btn-secondary" href="/blog"
-			>Read All
+			>記事をすべて見る
 			<Icon size={20} name="mdi:arrow-right" />
 		</a>
 	</section>
 
-	<!-- Recent Posts Section -->
+	<!-- About / Contact Section -->
 	<section class="app-container py-42 grid lg:grid-cols-2 gap-28 lg:gap-10">
 		<div class="space-y-6">
-			<h2 class="section-title">About Me</h2>
+			<h2 class="section-title">わたしについて</h2>
 			<p class="text-lg max-w-xl pb-4">
-				ダイビングインストラクターとして10年以上の経験を持ち、海外でのショップ運営や水族館での作業ダイバーとして活動しています。詳しい経歴はこちらから。
+				ホテルとキャンプ場を営む会社の常務と、フリーランスのWebエンジニアをしています。以前は10年以上ダイビングインストラクターでした。詳しい経歴はこちらから。
 			</p>
 			<a class="btn-secondary" href={`${SITE_BASE}/about`}
 				>詳しく見る
@@ -174,9 +174,9 @@ const organizationSchema = {
 			</a>
 		</div>
 		<div class="space-y-6">
-			<h2 class="section-title">Get in touch</h2>
+			<h2 class="section-title">お問い合わせ</h2>
 			<p class="text-lg max-w-xl">
-				ダイビングに関するご相談やお問い合わせはこちらからどうぞ
+				Web制作、WordPressの復旧や保守のご相談はこちらからどうぞ
 			</p>
 			<div class="flex flex-wrap mt-auto space-x-4">
 				<a
@@ -184,7 +184,7 @@ const organizationSchema = {
 					href="mailto:info@wadahide.com"
 					download
 					target="_blank"
-					>Get in touch
+					>メールで問い合わせる
 					<Icon height={20} name="mdi:email" />
 				</a>
 				<!-- <a class="btn-secondary" href="https://example.com" target="_blank"

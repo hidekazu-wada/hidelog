@@ -8,7 +8,7 @@ export async function GET(context) {
 		title: 'HideLog',
 		// `<description>` field in output xml
 		description:
-			'10年以上の経験を持つダイビングインストラクターが、安全に潜るための知識、器材選び、海外ダイビングのリアルな情報を実体験をもとに発信するブログ。',
+			'AIエンジニアとリゾート経営の現場から。WordPressの復旧・保守やWeb制作、AIを使った業務の仕組みづくり、ホテルとキャンプ場の経営で、実際に起きたことと判断の記録を書いています。',
 		// Pull in your project "site" from the endpoint context
 		// https://docs.astro.build/en/reference/api-reference/#site
 		site: context.site,

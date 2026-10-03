@@ -3,10 +3,11 @@
 
 export const SITE_TITLE = 'HideLog'
 export const SITE_DESCRIPTION =
-	'WordPressの復旧やサーバー、SEO、Astroなど、Web制作の現場で実際に手を動かして分かったことを書いています。ダイビングやトレーニング、暮らしの記録も。'
+	'AIエンジニアとリゾート経営の現場から。WordPressの復旧・保守やWeb制作、AIを使った業務の仕組みづくり、ホテルとキャンプ場の経営で、実際に起きたことと判断の記録を書いています。'
 
 export const CATEGORY_SLUGS = [
 	'code',
+	'management',
 	'dive',
 	'strength',
 	'nature',
@@ -33,10 +34,10 @@ export type CategoryDefinition = {
 export const Categories: CategoryDefinition[] = [
 	{
 		slug: 'code',
-		name: 'Code & Tech',
+		name: 'Web・AI',
 		tagline: '現役エンジニアの実装ログ',
 		description:
-			'Web制作、WordPressのトラブル復旧、SEO、Astro。現場で実際に手を動かした記録を、設計の視点から残します。',
+			'Web制作、WordPressのトラブル復旧、SEO、Astro、AIを使った業務の仕組みづくり。現場で実際に手を動かした記録を、設計の視点から残します。',
 		summary: 'WordPress復旧、セキュリティ、Astro、SEO設計。',
 		focus: [
 			'WordPress復旧・セキュリティ',
@@ -49,21 +50,21 @@ export const Categories: CategoryDefinition[] = [
 			'Web制作、WordPressの復旧・保守、SEO改善のご相談を受け付けています。',
 	},
 	{
-		slug: 'dive',
-		name: 'Dive Life',
-		tagline: '水中の冒険',
+		slug: 'management',
+		name: 'リゾート経営',
+		tagline: '家業の現場から',
 		description:
-			'インストラクターの視点で、安全に潜るための知識や海外ダイビングのリアルを共有します。',
-		summary: '恐怖克服、安全管理、海外ダイビング、器材レビュー。',
-		focus: ['安全と恐怖克服', '海外ダイビング', '器材レビュー'],
-		ctaLabel: 'ダイビングの相談をする',
-		ctaHref: 'mailto:info@wadahide.com?subject=Dive%20Life%20について',
+			'ホテルとキャンプ場を営む家族経営の会社で、採用・評価・現場の数字・仕組みづくりに向き合った記録です。何に困って、何を見て、どう決めたかを残します。',
+		summary: '採用と評価、現場の数字、仕組みづくり。',
+		focus: ['採用と評価制度', '現場の数字の見える化', '業務の仕組みづくり'],
+		ctaLabel: 'わたしについて',
+		ctaHref: '/about',
 		ctaDescription:
-			'安全講習、海外ダイビング、器材選びなどの相談を受け付けています。',
+			'Webとリゾート経営の両方に関わっている経歴をまとめています。',
 	},
 	{
 		slug: 'strength',
-		name: 'Strength Lab',
+		name: 'トレーニング',
 		tagline: 'トレーニングの実験ログ',
 		description:
 			'週6で鍛える生活のメニュー、食事、ルーティンを実験ログとして残します。',
@@ -77,20 +78,20 @@ export const Categories: CategoryDefinition[] = [
 	},
 	{
 		slug: 'nature',
-		name: 'Nature Living',
+		name: '自然と暮らし',
 		tagline: '自然と暮らす',
 		description:
 			'自然豊かな地域で暮らす幸福感や、働き方・コミュニティづくりを丁寧に綴ります。',
 		summary: '拠点づくり、ローカル仕事、季節の楽しみ方。',
 		focus: ['ローカルコミュニティ', '仕事と暮らしの両立', '自然との向き合い方'],
 		ctaLabel: '暮らしの相談をする',
-		ctaHref: 'mailto:info@wadahide.com?subject=Nature%20Living%20について',
+		ctaHref: 'mailto:info@wadahide.com?subject=自然と暮らしについて',
 		ctaDescription:
 			'移住の準備や自然のそばで働くための工夫について共有しています。',
 	},
 	{
 		slug: 'family',
-		name: 'Family & Home',
+		name: '家族と家',
 		tagline: '家族と家づくり',
 		description:
 			'夫婦生活、子育て、これから始まる家づくりのプロセスを共有し、同じ悩みを持つ人のヒントに。',
@@ -103,7 +104,7 @@ export const Categories: CategoryDefinition[] = [
 	},
 	{
 		slug: 'books',
-		name: 'Books & Ideas',
+		name: '読書',
 		tagline: '読書ログ',
 		description:
 			'本で得たアイデアを実験に結びつけ、暮らしや仕事への落とし込み方までレビューします。',
@@ -116,7 +117,7 @@ export const Categories: CategoryDefinition[] = [
 	},
 	{
 		slug: 'playground',
-		name: 'Playground',
+		name: '実験メモ',
 		tagline: '実験メモ',
 		description:
 			'まだ形になっていないアイデアや旅、マインドの試行錯誤を気軽に残す場所です。',
@@ -126,6 +127,19 @@ export const Categories: CategoryDefinition[] = [
 		ctaHref: '/blog',
 		ctaDescription: '旅や新企画の試行錯誤をそのまま残していく自由帳です。',
 		showOnHome: false,
+	},
+	{
+		slug: 'dive',
+		name: 'ダイビング',
+		tagline: 'もうひとつの顔',
+		description:
+			'元インストラクターの視点で、安全に潜るための知識や海外ダイビングのリアルをまとめています。',
+		summary: '恐怖克服、安全管理、海外ダイビング、器材レビュー。',
+		focus: ['安全と恐怖克服', '海外ダイビング', '器材レビュー'],
+		ctaLabel: 'わたしについて',
+		ctaHref: '/about',
+		ctaDescription:
+			'インストラクターとして過ごした10年と、今の仕事への繋がりをまとめています。',
 	},
 ]
 
@@ -156,16 +170,16 @@ const categoryLinks = Categories.map((cat) => ({
 
 export const WebsiteLinks = [
 	{
-		name: 'Home',
+		name: 'ホーム',
 		url: '/',
 	},
 	...categoryLinks,
 	{
-		name: 'Blog',
+		name: '記事一覧',
 		url: 'blog',
 	},
 	{
-		name: 'About',
+		name: 'わたしについて',
 		url: 'about',
 	},
 ]

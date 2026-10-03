@@ -36,16 +36,16 @@ const categoryLinks = Categories.filter((cat) =>
 
 const WebsiteLinks = [
 	{
-		name: 'Home',
+		name: 'ホーム',
 		url: '/',
 	},
 	...categoryLinks,
 	{
-		name: 'Blog',
+		name: '記事一覧',
 		url: 'blog',
 	},
 	{
-		name: 'About',
+		name: 'わたしについて',
 		url: 'about',
 	},
 ]
@@ -54,7 +54,7 @@ const WebsiteLinks = [
 <header class="fixed top-0 w-full z-40 bg-background dark:bg-background-dark">
 	<nav class="">
 		<div class="app-container flex justify-between items-center py-5">
-			<a href=`${SITE_BASE}/` aria-label="Home">
+			<a href=`${SITE_BASE}/` aria-label="ホーム">
 				<LogoSVG height={36} width={36} />
 			</a>
 			<div class="gap-8 hidden md:flex items-center">
@@ -74,8 +74,8 @@ const WebsiteLinks = [
 			<button
 				class="md:hidden cursor-pointer"
 				id="nav-open-btn"
-				aria-label="Open navigation menu"
-				title="Open navigation menu"
+				aria-label="メニューを開く"
+				title="メニューを開く"
 			>
 				<Icon aria-hidden name="mdi:menu" size={32} />
 			</button>
@@ -88,8 +88,8 @@ const WebsiteLinks = [
 				<button
 					id="nav-close-btn"
 					class="ml-auto block cursor-pointer"
-					aria-label="Close navigation menu"
-					title="Close navigation menu"
+					aria-label="メニューを閉じる"
+					title="メニューを閉じる"
 				>
 					<Icon aria-hidden name="mdi:close" size={32} />
 				</button>

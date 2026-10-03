@@ -29,7 +29,7 @@ for (const heading of headings) {
 	toc.length > 0 ? (
 		<nav class:list={{ 'py-12 rounded': !compact }} data-toc>
 			{!compact && (
-				<h2 class="text-2xl mr-2 pb-1 mb-3 font-bold">On This Page</h2>
+				<h2 class="text-2xl mr-2 pb-1 mb-3 font-bold">この記事の目次</h2>
 			)}
 			<ul class:list={{ 'space-y-2': compact, 'space-y-3': !compact }}>
 				{toc.map((h2) => (

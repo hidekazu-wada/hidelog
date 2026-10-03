@@ -13,7 +13,7 @@ const blogSchema = {
 	'@type': 'Blog',
 	name: 'HideLog',
 	description:
-		'10年以上の経験を持つダイビングインストラクターが、安全に潜るための知識、器材選び、海外ダイビングのリアルな情報を実体験をもとに発信するブログ。',
+		'AIエンジニアとリゾート経営の現場から。WordPressの復旧・保守やWeb制作、AIを使った業務の仕組みづくり、ホテルとキャンプ場の経営で、実際に起きたことと判断の記録を書いています。',
 	url: new URL('/blog/', Astro.site).toString(),
 	author: {
 		'@type': 'Person',
@@ -48,29 +48,29 @@ const breadcrumbSchema = {
 		{
 			'@type': 'ListItem',
 			position: 1,
-			name: 'Home',
+			name: 'ホーム',
 			item: Astro.site?.toString() || '',
 		},
 		{
 			'@type': 'ListItem',
 			position: 2,
-			name: 'Blog',
+			name: '記事一覧',
 			item: new URL('/blog/', Astro.site).toString(),
 		},
 	],
 }
 ---
 
-<BaseLayout title="Blog">
+<BaseLayout title="記事一覧">
 	<script type="application/ld+json" set:html={JSON.stringify(blogSchema)} />
 	<script
 		type="application/ld+json"
 		set:html={JSON.stringify(breadcrumbSchema)}
 	/>
 	<main class="app-container pt-36">
-		<h1 class="text-6xl pb-8 font-bold">Blog</h1>
+		<h1 class="text-6xl pb-8 font-bold">記事一覧</h1>
 		<p class="md:w-2/3 text-lg leading-[2rem]">
-			10年以上の経験を持つダイビングインストラクターが、安全に潜るための知識、器材選び、海外ダイビングのリアルな情報を実体験をもとに発信しています。初心者から上級者まで、あなたのダイビングライフをサポートする記事をまとめています。
+			WordPressの復旧・保守やWeb制作、AIを使った業務の仕組みづくり、ホテルとキャンプ場の経営で、実際に起きたことと、そのとき何を見て判断したかを書いています。以前インストラクターをしていたダイビングの記事も残しています。
 		</p>
 	</main>
 	<section class="app-container py-12">

@@ -37,13 +37,13 @@ const breadcrumbSchema = {
 		{
 			'@type': 'ListItem',
 			position: 1,
-			name: 'Home',
+			name: 'ホーム',
 			item: Astro.site?.toString() || '',
 		},
 		{
 			'@type': 'ListItem',
 			position: 2,
-			name: 'About Me',
+			name: 'わたしについて',
 			item: new URL('/about/', Astro.site).toString(),
 		},
 	],
@@ -51,7 +51,7 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-	title="About Me"
+	title="わたしについて"
 	description="現役Web制作エンジニア／リゾート企業CIOのHideの経歴。Web制作、Astroリニューアル、Webアプリ開発、SEO改善、WordPressのハッキング復旧まで。設計から原因を解決するという仕事の考え方を紹介します。"
 >
 	<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
@@ -60,7 +60,7 @@ const breadcrumbSchema = {
 		set:html={JSON.stringify(breadcrumbSchema)}
 	/>
 	<main class="app-container pt-36">
-		<h1 class="text-6xl pb-2 font-bold">About Me</h1>
+		<h1 class="text-6xl pb-2 font-bold">わたしについて</h1>
 	</main>
 	<section class="app-container py-12 mb-8">
 		<div
@@ -123,7 +123,7 @@ const breadcrumbSchema = {
 			<h2 class="text-3xl font-bold mt-12 mb-6">もうひとつの顔</h2>
 
 			<p class="mb-6">
-				エンジニアになる前は、ダイビングインストラクターとして10年以上活動していました。海外で仲間とダイビングショップを立ち上げて数年間運営し、初心者から上級者まで多くのダイバーを指導。現在も水族館の水中清掃などの業務に関わっています。
+				エンジニアになる前は、ダイビングインストラクターとして10年以上活動していました。海外で仲間とダイビングショップを立ち上げて数年間運営し、初心者から上級者まで多くのダイバーを指導しました。今は月に1〜2回、水族館の水中清掃を手伝う程度です。
 			</p>
 
 			<figure class="my-8">
@@ -145,7 +145,7 @@ const breadcrumbSchema = {
 			<h2 class="text-3xl font-bold mt-12 mb-6">このブログについて</h2>
 
 			<p class="mb-6">
-				HideLogでは、Web制作やWordPressのトラブル対応で実際に手を動かした記録を中心に、ダイビング、トレーニング、自然のそばでの暮らしまで、実体験にもとづいて書いています。とくに技術記事は、教科書的な手順ではなく「実際に起きたこと」と「そのとき何を見て判断したか」を残すようにしています。
+				HideLogでは、Web制作やWordPressのトラブル対応、AIを使った業務の仕組みづくりで実際に手を動かした記録と、ホテルとキャンプ場の経営の現場で向き合ったことを中心に書いています。以前インストラクターをしていたダイビングの記事も残しています。とくに技術記事は、教科書的な手順ではなく「実際に起きたこと」と「そのとき何を見て判断したか」を残すようにしています。
 			</p>
 
 			<p class="mb-6">

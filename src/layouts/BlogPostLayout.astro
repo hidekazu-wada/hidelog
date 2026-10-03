@@ -87,13 +87,13 @@ const breadcrumbSchema = {
 		{
 			'@type': 'ListItem',
 			position: 1,
-			name: 'Home',
+			name: 'ホーム',
 			item: Astro.site?.toString() || '',
 		},
 		{
 			'@type': 'ListItem',
 			position: 2,
-			name: 'Blog',
+			name: '記事一覧',
 			item: new URL('/blog/', Astro.site).toString(),
 		},
 		{
@@ -162,10 +162,10 @@ const breadcrumbSchema = {
 											name="mdi:calendar-refresh-outline"
 											class="inline-block text-primary dark:text-primary-dark"
 										/>
-										Last updated on{' '}
 										<time datetime={updatedDate.toISOString()}>
 											<FormattedDate date={updatedDate} />
 										</time>
+										更新
 									</span>
 								)
 							}

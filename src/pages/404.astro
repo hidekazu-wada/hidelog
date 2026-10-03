@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
-<BaseLayout title="404 Not Found">
+<BaseLayout title="ページが見つかりません">
 	<div>
 		<main
 			class="app-container h-[95vh] flex flex-col gap-6 justify-center py-56 items-center"
@@ -13,11 +13,9 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 				404
 			</h1>
 			<p class="text-xl text-center max-w-[480px]">
-				The page you're looking for wasn't found. Please check the link again.
+				お探しのページが見つかりませんでした。URLをもう一度ご確認ください。
 			</p>
-			<a class="btn-primary" href="/" download target="_blank"
-				>Go to Home Page
-			</a>
+			<a class="btn-primary" href="/" download target="_blank">ホームへ戻る </a>
 		</main>
 	</div>
 </BaseLayout>
