@@ -7,9 +7,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 interface Props {
 	title?: string
 	description?: string
+	// OG画像。記事ページは表紙を渡す。無ければ BaseHead の既定（og-default.jpg）
+	image?: string
 }
 
-const { title, description } = Astro.props
+const { title, description, image } = Astro.props
 
 import '@fontsource-variable/inter'
 import '@fontsource-variable/jetbrains-mono'
@@ -21,6 +23,7 @@ import '@fontsource-variable/jetbrains-mono'
 		<BaseHead
 			title={title || SITE_TITLE}
 			description={description || SITE_DESCRIPTION}
+			{...(image ? { image } : {})}
 		/>
 	</head>
 	<body
