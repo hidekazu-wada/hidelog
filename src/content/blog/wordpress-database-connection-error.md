@@ -8,7 +8,7 @@ category: 'code'
 ctaTitle: '自分で直すのが不安なときは'
 ctaDescription: 'WordPressの「表示されない」「エラーが出る」といったトラブルを、原因の調査から復旧まで対応します。何をしたか思い出せなくても大丈夫です。'
 ctaLabel: '復旧・トラブル対応を見る'
-ctaHref: 'https://coconala.com/services/2970257'
+ctaHref: 'mailto:info@wadahide.com?subject=WordPress復旧のご相談'
 draft: false
 ---
 

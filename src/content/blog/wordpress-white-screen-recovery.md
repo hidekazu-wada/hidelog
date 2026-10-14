@@ -9,7 +9,7 @@ category: 'code'
 ctaTitle: 'WordPressのトラブル・改ざんでお困りですか？'
 ctaDescription: '現役エンジニアが、WordPressの復旧・ハッキング対応を承っています。原因の特定から再発防止まで。状況確認・お見積りは無料です。'
 ctaLabel: 'WordPress復旧を相談する'
-ctaHref: 'https://coconala.com/services/2970257'
+ctaHref: 'mailto:info@wadahide.com?subject=WordPress復旧のご相談'
 draft: false
 ---
 

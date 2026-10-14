@@ -8,7 +8,7 @@ category: 'code'
 ctaTitle: 'WordPressの乗っ取り・改ざんでお困りですか？'
 ctaDescription: '自分で手を出して悪化させる前に、今の状態を確かめるところから相談できます。乗っ取り・改ざんの復旧は、状況を確認して見積もりを出してから着手しています。'
 ctaLabel: 'WordPress復旧を相談する'
-ctaHref: 'https://coconala.com/services/2970257'
+ctaHref: 'mailto:info@wadahide.com?subject=WordPress復旧のご相談'
 draft: false
 ---
 
