@@ -7,7 +7,7 @@ coverImageCredit: ''
 category: 'code'
 ctaTitle: '自分で直すのが不安なときは'
 ctaDescription: 'WordPressの「表示されない」「エラーが出る」といったトラブルを、原因の調査から復旧まで対応します。何をしたか思い出せなくても大丈夫です。'
-ctaLabel: '復旧・トラブル対応を見る'
+ctaLabel: 'WordPress復旧を相談する'
 ctaHref: 'mailto:info@wadahide.com?subject=WordPress復旧のご相談'
 draft: false
 ---
