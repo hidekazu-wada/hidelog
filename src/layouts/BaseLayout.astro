@@ -23,7 +23,7 @@ import '@fontsource-variable/jetbrains-mono'
 		<BaseHead
 			title={title || SITE_TITLE}
 			description={description || SITE_DESCRIPTION}
-			{...(image ? { image } : {})}
+			{...image ? { image } : {}}
 		/>
 	</head>
 	<body

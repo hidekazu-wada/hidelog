@@ -111,7 +111,11 @@ const breadcrumbSchema = {
 }
 ---
 
-<BaseLayout title={title} description={description} image={coverImageUrl.toString()}>
+<BaseLayout
+	title={title}
+	description={description}
+	image={coverImageUrl.toString()}
+>
 	<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
 	<script
 		type="application/ld+json"
