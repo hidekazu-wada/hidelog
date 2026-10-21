@@ -4,6 +4,7 @@ import BlogCard from '../../components/BlogCard.astro'
 import { Categories, SITE_TITLE } from '../../consts'
 import { Icon } from 'astro-icon/components'
 import { getCollection } from 'astro:content'
+import { comparePosts } from '../../lib/sort-posts'
 
 export async function getStaticPaths() {
 	return Categories.map((category) => ({
@@ -14,10 +15,12 @@ export async function getStaticPaths() {
 
 const { category } = Astro.props
 
-const posts = await getCollection(
-	'blog',
-	({ data }) => data.draft !== true && data.category === category.slug
-)
+const posts = (
+	await getCollection(
+		'blog',
+		({ data }) => data.draft !== true && data.category === category.slug
+	)
+).sort(comparePosts)
 
 // CollectionPage structured data
 const collectionPageSchema = {

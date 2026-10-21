@@ -1,8 +1,11 @@
 import rss from '@astrojs/rss'
 import { getCollection } from 'astro:content'
+import { comparePosts } from '../lib/sort-posts'
 
 export async function GET(context) {
-	const blog = await getCollection('blog', ({ data }) => data.draft !== true)
+	const blog = (
+		await getCollection('blog', ({ data }) => data.draft !== true)
+	).sort(comparePosts)
 	return rss({
 		// `<title>` field in output xml
 		title: 'HideLog',

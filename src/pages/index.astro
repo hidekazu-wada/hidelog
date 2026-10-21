@@ -11,10 +11,11 @@ import {
 import { Icon } from 'astro-icon/components'
 import BlogCard from '../components/BlogCard.astro'
 import { getCollection } from 'astro:content'
+import { comparePosts } from '../lib/sort-posts'
 
 const allPosts = (
 	await getCollection('blog', ({ data }) => data.draft !== true)
-).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+).sort(comparePosts)
 
 const posts = allPosts.slice(0, 4)
 
