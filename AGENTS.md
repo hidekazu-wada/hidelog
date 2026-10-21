@@ -44,7 +44,7 @@ Saralテーマを使用したAstro製の個人ブログサイトです。MDXサ�
 ### コンテンツ管理
 
 - ブログ記事は `src/content/blog/` に `.md` または `.mdx` ファイルとして配置
-- コンテンツスキーマは `src/content/config.ts` でZodを使用して定義
+- コンテンツスキーマは `src/content.config.ts` で glob loader と Zod（`astro/zod`）を使用して定義
 - 各ブログ記事に必要なフィールド: `title`、`description`、`pubDate`、オプションで `updatedDate`、`coverImageCredit`
 - ブログ記事のURLはファイル名から生成される（例: `my-post.md` → `/blog/my-post`）
 

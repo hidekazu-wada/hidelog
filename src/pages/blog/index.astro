@@ -32,7 +32,7 @@ const blogSchema = {
 		'@type': 'BlogPosting',
 		headline: post.data.title,
 		description: post.data.description,
-		url: new URL(`/blog/${post.slug}/`, Astro.site).toString(),
+		url: new URL(`/blog/${post.id}/`, Astro.site).toString(),
 		datePublished: post.data.pubDate.toISOString(),
 		dateModified: post.data.updatedDate
 			? post.data.updatedDate.toISOString()

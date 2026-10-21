@@ -1,7 +1,11 @@
-import { defineCollection, z } from 'astro:content'
-import { CATEGORY_SLUGS } from '../consts'
+import { defineCollection } from 'astro:content'
+import { glob } from 'astro/loaders'
+import { z } from 'astro/zod'
+import { CATEGORY_SLUGS } from './consts'
 
 const blog = defineCollection({
+	// 先頭が `_` のファイル（_template.md）は旧方式と同じく対象外
+	loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/content/blog' }),
 	// Type-check frontmatter using a schema
 	schema: z.object({
 		title: z.string(),
