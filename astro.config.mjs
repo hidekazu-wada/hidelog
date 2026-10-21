@@ -29,7 +29,8 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 		build: {
 			// Vite 8 の既定（Safari 16.4+）だとメディアクエリが範囲記法（width>=…）になり古い iOS で崩れるため、5 と同じ出力に揃える
-			cssTarget: ['edge88', 'firefox78', 'chrome87', 'safari14'],
+			// chrome87 だと :is() に :-webkit-any() の代替が足され詳細度が変わるため chrome88 にする
+			cssTarget: ['edge88', 'firefox78', 'chrome88', 'safari14'],
 		},
 	},
 	markdown: {
